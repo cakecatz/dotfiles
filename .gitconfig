@@ -1,0 +1,8 @@
+[user]
+	email = mail.ryonarita@gmail.com
+	name = Ryo Narita
+[core]
+    editor = vim
+[alias]
+	c = commit
+    s = status

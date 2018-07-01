@@ -1,1 +1,2 @@
 [[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
+export GTK_IM_MODULE=fcitx

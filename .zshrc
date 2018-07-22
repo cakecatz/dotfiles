@@ -1,11 +1,20 @@
+### aliases
+source $HOME/.aliases.zsh
+
 ### NVM ###
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
+export EDITOR=vim
+
 ### PATH ###
+ANDROID_STUDIO=/opt/android-studio/bin
 YARN_BIN=$(yarn global bin)
 USER_BIN=$HOME/bin
-PATH=$YARN_BIN:$USER_BIN:$PATH
+ANDROID_SDK=$HOME/Android/Sdk
+ANDROID_SDK_TOOLS=$ANDROID_SDK/Sdk/tools/bin
+EMULATOR_TOOLS=$ANDROID_SDK/emulator
+PATH=$YARN_BIN:$USER_BIN:$ANDROID_STUDIO:$ANDROID_SDK_TOOLS:$EMULATOR_TOOLS:$PATH
 
 ### ANTIBODY
 source <(antibody init)
@@ -15,12 +24,11 @@ antibody bundle < ~/.zsh_plugins
 source $HOME/.cargo/env
 
 ### PHPBREW ###
-[[ -e $HOME/.phpbrew/bashrc ]] && source /home/ryo/.phpbrew/bashrc
-
-### ALIASE ###
-alias s="git status"
-alias reload="source ~/.zshrc"
-alias ls="exa"
+[[ -e $HOME/.phpbrew/bashrc ]] && source /home/$USER/.phpbrew/bashrc
 
 ### zsh completion ###
 fpath=(~/.zsh-completions $fpath)
+
+function co() {
+  git branch -a --sort=-authordate | cut -b 3- | perl -pe 's#^remotes/origin/###' | perl -nlE 'say if !$c{$_}++' | grep -v -- "->" | peco | xargs git checkout
+}

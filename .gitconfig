@@ -5,4 +5,7 @@
     editor = vim
 [alias]
 	c = commit
-    s = status
+	s = status
+	co = checkout
+	p = push
+	pp = push -u

@@ -18,8 +18,7 @@ GO_BIN=$HOME/go/bin
 PATH=$YARN_BIN:$USER_BIN:$ANDROID_STUDIO:$ANDROID_SDK_TOOLS:$EMULATOR_TOOLS:$GO_BIN:$PATH
 
 ### ANTIBODY
-source <(antibody init)
-antibody bundle <~/.zsh_plugins
+source ~/.zsh_plugins.sh
 
 ### CARGO ###
 source $HOME/.cargo/env

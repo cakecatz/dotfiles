@@ -5,7 +5,7 @@ all: ## Install all
 install: ## Install applications
 	sudo apt update
 	sudo apt install zsh neovim git yarn apt-transport-https ca-certificates \
-		curl software-properties-common
+		curl software-properties-common xclip xsel
 
 nvm: ## install nvm
 	curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash

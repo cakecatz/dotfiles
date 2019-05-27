@@ -4,6 +4,8 @@ alias reload="source ~/.zshrc"
 alias ls="exa"
 alias cat="bat"
 alias v='nvim'
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
 alias search="rg \
 	--color='always' \
 	--heading \

@@ -18,7 +18,7 @@ PATH=$YARN_BIN:$USER_BIN:$ANDROID_STUDIO:$ANDROID_SDK_TOOLS:$EMULATOR_TOOLS:$PAT
 
 ### ANTIBODY
 source <(antibody init)
-antibody bundle < ~/.zsh_plugins
+antibody bundle <~/.zsh_plugins
 
 ### CARGO ###
 source $HOME/.cargo/env
@@ -29,6 +29,9 @@ source $HOME/.cargo/env
 ### zsh completion ###
 fpath=(~/.zsh-completions $fpath)
 
-function co() {
-  git branch -a --sort=-authordate | cut -b 3- | perl -pe 's#^remotes/origin/###' | perl -nlE 'say if !$c{$_}++' | grep -v -- "->" | peco | xargs git checkout
-}
+# keybind
+
+zle -N zsh-peco-ghq
+bindkey '^]' zsh-peco-ghq
+
+function gi() { curl -sLw n https://www.gitignore.io/api/$@; }

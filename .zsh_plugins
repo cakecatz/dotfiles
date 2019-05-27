@@ -1,6 +1,8 @@
-zsh-users/zsh-completions
+cakecatz/co                               
+cakecatz/zsh-peco-ghq
+jocelynmallon/zshmarks                    
+mafredri/zsh-async                        
+sindresorhus/pure                         
+zsh-users/zsh-completions                 
+zsh-users/zsh-history-substring-search    
 zsh-users/zsh-syntax-highlighting
-zsh-users/zsh-history-substring-search
-mafredri/zsh-async
-sindresorhus/pure
-jocelynmallon/zshmarks

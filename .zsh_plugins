@@ -1,9 +1,7 @@
-cakecatz/co                               
+cakecatz/co
 cakecatz/zsh-peco-ghq
-jocelynmallon/zshmarks                    
-mafredri/zsh-async                        
-sindresorhus/pure                         
-zsh-users/zsh-completions                 
-zsh-users/zsh-history-substring-search    
+mafredri/zsh-async
+zsh-users/zsh-completions
+zsh-users/zsh-history-substring-search
 zdharma/fast-syntax-highlighting
 paulirish/git-open
